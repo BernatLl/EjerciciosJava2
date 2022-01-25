@@ -68,10 +68,12 @@ function Point(x, y) {
   this.x = x;
   this.y = y;
 }
+Point2 = (point1, point2) =>
+  new Point(point2.x - point1.x, point2.y - point1.y);
 
-const examplePoint1 = new Point(1, 2);
-const examplePoint2 = new Point(9, 7);
-
+const P1 = new Point(1, 2);
+const P2 = new Point(9, 7);
+console.log(Point2(P1, P2));
 /*
  1. Crea una funcion que ordene de > o < el dataset 1.
  2. Crea una funcion que cuente las letras en el dataset 2 (Debes usar un objeto)
